@@ -76,6 +76,21 @@ describe('arrayCharacterObject', () => {
   it('debería ser un "object"', () => {
     assert.equal(typeof arrayCharacterObject(muestra), 'object');
   });
+
+  it('si hago "let prueba = arrayCharacterObject(muestra)", prueba[0] debería ser un "object"', () => {
+    let prueba = arrayCharacterObject(muestra);
+    assert.equal(typeof prueba[0], 'object');
+  });
+
+  it('si hago "let prueba = arrayCharacterObject(muestra)", prueba[0].name debería ser un "string"', () => {
+    let prueba = arrayCharacterObject(muestra);
+    assert.equal(typeof prueba[0].name, 'string');
+  });
+
+  it('si hago "let prueba = arrayCharacterObject(muestra)", prueba[1].name debería ser "Hookah Alien"', () => {
+    let prueba = arrayCharacterObject(muestra);
+    assert.equal(prueba[1].name, 'Hookah Alien');
+  });
 });
 
 describe('arrayCharacterObjectByRange', () => {
@@ -85,7 +100,22 @@ describe('arrayCharacterObjectByRange', () => {
   });
 
   it('debería ser un "object"', () => {
-    assert.equal(typeof arrayCharacterObjectByRange(muestra, "ABCDE"), 'object');
+    assert.equal(typeof arrayCharacterObjectByRange(muestra, "HRS"), 'object');
+  });
+
+  it('si hago "let prueba = arrayCharacterObjectByRange(muestra)", prueba[0] debería ser un "object"', () => {
+    let prueba = arrayCharacterObjectByRange(muestra, "HRS");
+    assert.equal(typeof prueba[0], 'object');
+  });
+
+  it('si hago "let prueba = arrayCharacterObjectByRange(muestra)", prueba[0].name debería ser un "string"', () => {
+    let prueba = arrayCharacterObjectByRange(muestra, "HRS");
+    assert.equal(typeof prueba[0].name, 'string');
+  });
+
+  it('si hago "let prueba = arrayCharacterObjectByRange(muestra)", prueba[1].name debería ser "Hookah Alien"', () => {
+    let prueba = arrayCharacterObjectByRange(muestra, "HRS");
+    assert.equal(prueba[1].name, 'Hookah Alien');
   });
 });
 
@@ -97,5 +127,15 @@ describe('arrayCharacterNameByRange', () => {
 
   it('debería ser un "object"', () => {
     assert.equal(typeof arrayCharacterNameByRange(muestra, "ABCDE"), 'object');
+  });
+
+  it('si hago "let prueba = arrayCharacterObjectByRange(muestra)", prueba[0] debería ser un "string"', () => {
+    let prueba = arrayCharacterNameByRange(muestra, "HRS");
+    assert.equal(typeof prueba[0], 'string');
+  });
+
+  it('si hago "let prueba = arrayCharacterObjectByRange(muestra)", prueba[1] debería ser "Hookah Alien"', () => {
+    let prueba = arrayCharacterNameByRange(muestra, "HRS");
+    assert.equal(prueba[1], 'Hookah Alien');
   });
 });
