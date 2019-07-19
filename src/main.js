@@ -26,4 +26,45 @@ if (j < 33) {
   document.getElementById("h1").style.fontFamily = "youmurdererbbReg";
 }
 
+const characterSelected = document.getElementById("character");
+characterSelected.addEventListener("change", ()=> {
+  let arrayCharacters = window.arrayCharacterObjectByRange(window.RICKANDMORTY.results, document.getElementById("character").value);
+  document.getElementById("data").innerHTML="";
+  for (let i=0; i<arrayCharacters.length; i++) {
+    let node = document.createElement("div");
+    let textNode = document.createTextNode("Name: "+arrayCharacters[i].name);
+    node.appendChild(textNode);
+    node.appendChild(document.createElement("br"));
+
+    textNode = document.createTextNode("Status: "+arrayCharacters[i].status);
+    node.appendChild(textNode);
+    node.appendChild(document.createElement("br"));
+
+    textNode = document.createTextNode("Specie: "+arrayCharacters[i].species);
+    node.appendChild(textNode);
+    node.appendChild(document.createElement("br"));
+
+    textNode = document.createTextNode("Type: "+arrayCharacters[i].type);
+    node.appendChild(textNode);
+    node.appendChild(document.createElement("br"));
+
+    textNode = document.createTextNode("Gender: "+arrayCharacters[i].gender);
+    node.appendChild(textNode);
+    node.appendChild(document.createElement("br"));
+
+    document.getElementById("data").appendChild(node);
+    node.setAttribute("id", arrayCharacters[i].name);
+  }
+
+})
 //select-option dináMicroverse
+//tarjeta character
+// const characterSelected = document.getElementById("character");
+// characterSelected.addEventListener("change", ()=> {
+//   let divModal = document.createElement("DIV");
+//   divNode.class = "modal";
+//   let divCard = document.createElement("DIV");
+//   divCard.class = "card";
+//   let pName = document.createElement("p");
+//   pName.
+// })
