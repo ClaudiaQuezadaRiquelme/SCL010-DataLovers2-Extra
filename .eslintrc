@@ -7,6 +7,10 @@
   },
   "extends": "eslint:recommended",
   "globals": {
-    "example": false
+    "example": false,
+    "arrayCharacterName": false,
+    "arrayCharacterObject": false,
+    "arrayCharacterObjectByRange": false,
+    "arrayCharacterNameByRange": false,
   }
 }

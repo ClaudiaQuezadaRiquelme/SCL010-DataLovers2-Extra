@@ -2,18 +2,31 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Data Lovers</title>
+    <title>Rick and Morty Search</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="root"></div>
-    <!-- <script src="./data/injuries/injuries.js"></script> -->
-    <!-- <script src="./data/pokemon/pokemon.js"></script> -->
-    <!-- <script src="./data/steam/steam.js"></script> -->
-    <!-- <script src="./data/worldbank/worldbank.js"></script> -->
-    <!-- <script src="./data/lol/lol.js"></script> -->
-    <!-- <script src="./data/patient/patient.js"></script> -->
-    <!-- <script src="./data/rickandmorty/rickandmorty.js"></script> -->
+    <div class="father">
+      <header class="header">
+        <div class="imgTitle" id="imgTitle"></div>
+        <div class="title" id="title"><h1 id="h1">Rick &amp; Morty</h1></div>
+        <div class="menu">
+          <select id="character">
+            <option value="characters">Characters</option>
+            <option value="ABCDE">A-E</option>
+            <option value="FGHIJ">F-J</option>
+            <option value="KLMNO">K-O</option>
+            <option value="PQRST">P-T</option>
+            <option value="UVWXYZ">U-Z</option>
+          </select>
+          <select id="episode"></select>
+          <select id="gender"></select>
+          <select id="specie"></select>
+        </div>
+      </header>
+      <div id="data"></div>
+    </div>
+    <script src="./data/rickandmorty/rickandmorty.js"></script>
     <script src="data.js"></script>
     <script src="main.js"></script>
   </body>

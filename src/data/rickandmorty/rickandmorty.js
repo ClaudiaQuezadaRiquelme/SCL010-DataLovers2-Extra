@@ -9375,3 +9375,5 @@ const RICKANDMORTY = {
     "created": "2018-05-22T17:51:07.373Z"
   }]
 }
+
+window.RICKANDMORTY = RICKANDMORTY;
