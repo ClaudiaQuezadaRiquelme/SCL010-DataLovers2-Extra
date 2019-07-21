@@ -5,6 +5,7 @@ require('./data.spec.js');
 
 const muestra = [
   {
+    "id": 1,
     "name": "Rick Sanchez",
     "status": "Alive",
     "species": "Human",
@@ -137,5 +138,31 @@ describe('arrayCharacterNameByRange', () => {
   it('si hago "let prueba = arrayCharacterObjectByRange(muestra)", prueba[1] debería ser "Hookah Alien"', () => {
     let prueba = arrayCharacterNameByRange(muestra, "HRS");
     assert.equal(prueba[1], 'Hookah Alien');
+  });
+});
+
+describe('arrayEpisodes', () => {
+
+  it('debería ser una función', () => {
+    assert.equal(typeof arrayEpisodes, 'function');
+  });
+
+  it('debería ser un "object"', () => {
+    assert.equal(typeof arrayEpisodes(muestra), 'object');
+  });
+
+  it('si hago "let prueba = arrayEpisodes(muestra)", prueba.length debería ser 31', () => {
+    let prueba = arrayEpisodes(muestra);
+    assert.equal(prueba.length, 31);
+  });
+
+  it('si hago "let prueba = arrayEpisodes(muestra)", prueba[15] debería ser un "string"', () => {
+    let prueba = arrayEpisodes(muestra);
+    assert.equal(typeof prueba[15], 'string');
+  });
+
+  it('si hago "let prueba = arrayEpisodes(muestra)", prueba[15] debería ser "https://rickandmortyapi.com/api/episode/16"', () => {
+    let prueba = arrayEpisodes(muestra);
+    assert.equal(prueba[15], 'https://rickandmortyapi.com/api/episode/16');
   });
 });
