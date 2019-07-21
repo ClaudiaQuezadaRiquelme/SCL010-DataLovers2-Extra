@@ -32,6 +32,13 @@ characterSelected.addEventListener("change", ()=> {
   document.getElementById("data").innerHTML="";
   for (let i=0; i<arrayCharacters.length; i++) {
     let node = document.createElement("div");
+
+    let img = document.createElement("img");
+    img.id = "picture";
+    img.src = arrayCharacters[i].image;
+    node.appendChild(img);
+    node.appendChild(document.createElement("br"));
+
     let textNode = document.createTextNode("Name: "+arrayCharacters[i].name);
     node.appendChild(textNode);
     node.appendChild(document.createElement("br"));

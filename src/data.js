@@ -53,6 +53,8 @@ const arrayCharacterNameByRange = (RMDataResults, stringRange) => {
   return arrayCharacterByRange;
 }
 
+
+
 //window.RMData = RMData;
 window.arrayCharacterName = arrayCharacterName;
 window.arrayCharacterObject = arrayCharacterObject;
