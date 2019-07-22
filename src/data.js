@@ -89,6 +89,42 @@ const arrayEpisodesGetNumberOfEpisodes = (RMDataResults) => {
   return arrayEpisodesGetNumberOfEpisodes;
 }
 
+const arrayEpisodesGetNumberOfEpisodesOfTheCharacter = (arrayEpisodesOfTheCharacter) => {
+  let arrayEpisodesGetNumberOfEpisodes = [];
+  for (let i=0; i<arrayEpisodesOfTheCharacter.length; i++) {
+    let numberOfTheEpisode = arrayEpisodesOfTheCharacter[i].replace("https://rickandmortyapi.com/api/episode/", "");
+    arrayEpisodesGetNumberOfEpisodes.push(numberOfTheEpisode);
+  }
+  return arrayEpisodesGetNumberOfEpisodes;
+}
+
+const ShowEpisodesOfTheCharacter = (stringCharacter, RMDataResults) => {
+  let arrayEpisodesOfTheCharacter = [];
+  let arrayNumberOfEpisodes = [];
+  let stringEpisodes = "";
+
+  for (let i=0; i<RMDataResults.length; i++) {
+    if ( stringCharacter === RMDataResults[i].name) {
+      arrayEpisodesOfTheCharacter = RMDataResults[i].episode;
+    }
+  }
+  arrayNumberOfEpisodes = arrayEpisodesGetNumberOfEpisodesOfTheCharacter(arrayEpisodesOfTheCharacter);
+
+  for (let i=0; i<arrayNumberOfEpisodes .length; i++) {
+    if (arrayNumberOfEpisodes.length === 1){ //si tiene un episodio solamente...
+      stringEpisodes += arrayNumberOfEpisodes[i]; // … lo escribe y nada más
+
+    } else if (i===0) { //si es el primer episodio
+      stringEpisodes += arrayNumberOfEpisodes[i]; // … lo escribe y nada más
+    } else if (i === (arrayNumberOfEpisodes .length-1)) { //si es el último episodio
+      stringEpisodes += (" y " + arrayNumberOfEpisodes[i]);
+    } else { //si es un episodio al medio
+      stringEpisodes += (", " + arrayNumberOfEpisodes[i]);
+    }
+  }
+  return stringEpisodes;
+}
+
 
 //window.RMData = RMData;
 window.arrayCharacterName = arrayCharacterName;
@@ -97,3 +133,6 @@ window.arrayCharacterObjectByRange = arrayCharacterObjectByRange;
 window.arrayCharacterNameByRange = arrayCharacterNameByRange;
 window.arrayEpisodes = arrayEpisodes;
 window.arrayEpisodesGetNumberOfEpisodes = arrayEpisodesGetNumberOfEpisodes;
+window.ShowEpisodesOfTheCharacter = ShowEpisodesOfTheCharacter;
+window.arrayEpisodesGetNumberOfEpisodesOfTheCharacter = arrayEpisodesGetNumberOfEpisodesOfTheCharacter;
+window.ShowEpisodesOfTheCharacter = ShowEpisodesOfTheCharacter;

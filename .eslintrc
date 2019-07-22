@@ -13,6 +13,8 @@
     "arrayCharacterObjectByRange": false,
     "arrayCharacterNameByRange": false,
     "arrayEpisodes": false,
-    "arrayEpisodesGetNumberOfEpisodes": false
+    "arrayEpisodesGetNumberOfEpisodes": false,
+    "ShowEpisodesOfTheCharacter": false,
+    "arrayEpisodesGetNumberOfEpisodesOfTheCharacter": false
   }
 }
