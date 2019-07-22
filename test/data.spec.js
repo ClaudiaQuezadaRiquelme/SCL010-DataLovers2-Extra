@@ -193,23 +193,64 @@ describe('arrayEpisodesGetNumberOfEpisodes', () => {
   });
 });
 
-describe('ShowEpisodesOfTheCharacter', () => {
+describe('arrayEpisodesGetNumberOfEpisodesOfTheCharacter', () => {
 
   it('debería ser una función', () => {
-    assert.equal(typeof ShowEpisodesOfTheCharacter, 'function');
+    assert.equal(typeof arrayEpisodesGetNumberOfEpisodesOfTheCharacter, 'function');
+  });
+
+  it('debería ser un "object"', () => {
+    assert.equal(typeof arrayEpisodesGetNumberOfEpisodesOfTheCharacter(muestra[2].episode), 'object');
+  });
+
+  it('si hago "let prueba = arrayEpisodesGetNumberOfEpisodesOfTheCharacter(muestra[0].episode)", prueba.length debería ser 31', () => {
+    let prueba = arrayEpisodesGetNumberOfEpisodesOfTheCharacter(muestra[0].episode);
+    assert.equal(prueba.length, 31);
+  });
+
+  it('si hago "let prueba = arrayEpisodesGetNumberOfEpisodesOfTheCharacter(muestra[0].episode)", prueba[22] debería ser un "string"', () => {
+    let prueba = arrayEpisodesGetNumberOfEpisodesOfTheCharacter(muestra[0].episode);
+    assert.equal(typeof prueba[22], 'string');
+  });
+
+  it('si hago "let prueba = arrayEpisodesGetNumberOfEpisodesOfTheCharacter(muestra[0].episode)", prueba[22] debería ser "23"', () => {
+    let prueba = arrayEpisodesGetNumberOfEpisodesOfTheCharacter(muestra[0].episode);
+    assert.equal(prueba[22], '23');
+  });
+
+  it('si hago "let prueba = arrayEpisodesGetNumberOfEpisodesOfTheCharacter(muestra[2].episode)", prueba.length debería ser 2', () => {
+    let prueba = arrayEpisodesGetNumberOfEpisodesOfTheCharacter(muestra[2].episode);
+    assert.equal(prueba.length, 2);
+  });
+
+  it('si hago "let prueba = arrayEpisodesGetNumberOfEpisodesOfTheCharacter(muestra[2].episode)", prueba[1] debería ser un "string"', () => {
+    let prueba = arrayEpisodesGetNumberOfEpisodesOfTheCharacter(muestra[2].episode);
+    assert.equal(typeof prueba[1], 'string');
+  });
+
+  it('si hago "let prueba = arrayEpisodesGetNumberOfEpisodesOfTheCharacter(muestra[2].episode)", prueba[1] debería ser "11"', () => {
+    let prueba = arrayEpisodesGetNumberOfEpisodesOfTheCharacter(muestra[2].episode);
+    assert.equal(prueba[1], '11');
+  });
+});
+
+describe('showEpisodesOfTheCharacter', () => {
+
+  it('debería ser una función', () => {
+    assert.equal(typeof showEpisodesOfTheCharacter, 'function');
   });
 
   it('debería ser un "string"', () => {
-    assert.equal(typeof ShowEpisodesOfTheCharacter('Slippery Stair', muestra), 'string');
+    assert.equal(typeof showEpisodesOfTheCharacter('Slippery Stair', muestra), 'string');
   });
 
-  it('si hago "let prueba = ShowEpisodesOfTheCharacter("Slippery Stair", muestra)", prueba debería ser un "string"', () => {
-    let prueba = ShowEpisodesOfTheCharacter('Slippery Stair', muestra);
+  it('si hago "let prueba = showEpisodesOfTheCharacter("Slippery Stair", muestra)", prueba debería ser un "string"', () => {
+    let prueba = showEpisodesOfTheCharacter('Slippery Stair', muestra);
     assert.equal(typeof prueba, 'string');
   });
 
-  it('si hago "let prueba = ShowEpisodesOfTheCharacter("Slippery Stair", muestra)", prueba debería ser "5 y 11"', () => {
-    let prueba = ShowEpisodesOfTheCharacter('Slippery Stair', muestra);
+  it('si hago "let prueba = showEpisodesOfTheCharacter("Slippery Stair", muestra)", prueba debería ser "5 y 11"', () => {
+    let prueba = showEpisodesOfTheCharacter('Slippery Stair', muestra);
     assert.equal(prueba, '5 y 11');
   });
 });

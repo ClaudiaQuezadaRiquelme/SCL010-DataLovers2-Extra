@@ -14,7 +14,7 @@
     "arrayCharacterNameByRange": false,
     "arrayEpisodes": false,
     "arrayEpisodesGetNumberOfEpisodes": false,
-    "ShowEpisodesOfTheCharacter": false,
+    "showEpisodesOfTheCharacter": false,
     "arrayEpisodesGetNumberOfEpisodesOfTheCharacter": false
   }
 }

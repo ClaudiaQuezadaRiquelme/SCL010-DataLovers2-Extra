@@ -98,7 +98,7 @@ const arrayEpisodesGetNumberOfEpisodesOfTheCharacter = (arrayEpisodesOfTheCharac
   return arrayEpisodesGetNumberOfEpisodes;
 }
 
-const ShowEpisodesOfTheCharacter = (stringCharacter, RMDataResults) => {
+const showEpisodesOfTheCharacter = (stringCharacter, RMDataResults) => {
   let arrayEpisodesOfTheCharacter = [];
   let arrayNumberOfEpisodes = [];
   let stringEpisodes = "";
@@ -133,6 +133,5 @@ window.arrayCharacterObjectByRange = arrayCharacterObjectByRange;
 window.arrayCharacterNameByRange = arrayCharacterNameByRange;
 window.arrayEpisodes = arrayEpisodes;
 window.arrayEpisodesGetNumberOfEpisodes = arrayEpisodesGetNumberOfEpisodes;
-window.ShowEpisodesOfTheCharacter = ShowEpisodesOfTheCharacter;
+window.showEpisodesOfTheCharacter = showEpisodesOfTheCharacter;
 window.arrayEpisodesGetNumberOfEpisodesOfTheCharacter = arrayEpisodesGetNumberOfEpisodesOfTheCharacter;
-window.ShowEpisodesOfTheCharacter = ShowEpisodesOfTheCharacter;
