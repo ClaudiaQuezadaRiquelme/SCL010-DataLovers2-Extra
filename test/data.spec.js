@@ -166,3 +166,29 @@ describe('arrayEpisodes', () => {
     assert.equal(prueba[15], 'https://rickandmortyapi.com/api/episode/16');
   });
 });
+
+describe('arrayEpisodesGetNumberOfEpisodes', () => {
+
+  it('debería ser una función', () => {
+    assert.equal(typeof arrayEpisodesGetNumberOfEpisodes, 'function');
+  });
+
+  it('debería ser un "object"', () => {
+    assert.equal(typeof arrayEpisodesGetNumberOfEpisodes(muestra), 'object');
+  });
+
+  it('si hago "let prueba = arrayEpisodesGetNumberOfEpisodes(muestra)", prueba.length debería ser 31', () => {
+    let prueba = arrayEpisodesGetNumberOfEpisodes(muestra);
+    assert.equal(prueba.length, 31);
+  });
+
+  it('si hago "let prueba = arrayEpisodesGetNumberOfEpisodes(muestra)", prueba[15] debería ser un "string"', () => {
+    let prueba = arrayEpisodesGetNumberOfEpisodes(muestra);
+    assert.equal(typeof prueba[15], 'string');
+  });
+
+  it('si hago "let prueba = arrayEpisodesGetNumberOfEpisodes(muestra)", prueba[15] debería ser "16"', () => {
+    let prueba = arrayEpisodesGetNumberOfEpisodes(muestra);
+    assert.equal(prueba[15], '16');
+  });
+});

@@ -12,6 +12,7 @@
     "arrayCharacterObject": false,
     "arrayCharacterObjectByRange": false,
     "arrayCharacterNameByRange": false,
-    "arrayEpisodes": false
+    "arrayEpisodes": false,
+    "arrayEpisodesGetNumberOfEpisodes": false
   }
 }

@@ -79,6 +79,16 @@ const arrayEpisodes = (RMDataResults) => {
 	return arrayEpisodes;
 }
 
+const arrayEpisodesGetNumberOfEpisodes = (RMDataResults) => {
+  let arrayUrlEpisodes = arrayEpisodes(RMDataResults);
+  let arrayEpisodesGetNumberOfEpisodes = [];
+  for (let i=0; i<arrayUrlEpisodes.length; i++) {
+    let numberOfTheEpisode = arrayUrlEpisodes[i].replace("https://rickandmortyapi.com/api/episode/", "");
+    arrayEpisodesGetNumberOfEpisodes.push(numberOfTheEpisode);
+  }
+  return arrayEpisodesGetNumberOfEpisodes;
+}
+
 
 //window.RMData = RMData;
 window.arrayCharacterName = arrayCharacterName;
@@ -86,3 +96,4 @@ window.arrayCharacterObject = arrayCharacterObject;
 window.arrayCharacterObjectByRange = arrayCharacterObjectByRange;
 window.arrayCharacterNameByRange = arrayCharacterNameByRange;
 window.arrayEpisodes = arrayEpisodes;
+window.arrayEpisodesGetNumberOfEpisodes = arrayEpisodesGetNumberOfEpisodes;
