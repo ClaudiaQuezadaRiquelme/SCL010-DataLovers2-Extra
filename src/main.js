@@ -59,6 +59,10 @@ characterSelected.addEventListener("change", ()=> {
     node.appendChild(textNode);
     node.appendChild(document.createElement("br"));
 
+    textNode = document.createTextNode("Episode(s):  "+window.showEpisodesOfTheCharacter(arrayCharacters[i].name, window.RICKANDMORTY.results));
+    node.appendChild(textNode);
+    node.appendChild(document.createElement("br"));
+
     document.getElementById("data").appendChild(node);
     node.setAttribute("id", arrayCharacters[i].name);
   }

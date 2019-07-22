@@ -106,17 +106,18 @@ const showEpisodesOfTheCharacter = (stringCharacter, RMDataResults) => {
   for (let i=0; i<RMDataResults.length; i++) {
     if ( stringCharacter === RMDataResults[i].name) {
       arrayEpisodesOfTheCharacter = RMDataResults[i].episode;
+      arrayNumberOfEpisodes = arrayEpisodesGetNumberOfEpisodesOfTheCharacter(arrayEpisodesOfTheCharacter);
+      break;//si no uso este break,en episode(s) de Rick Sanchez aparece sólo 6. Esto no lo detectó el test.
     }
   }
-  arrayNumberOfEpisodes = arrayEpisodesGetNumberOfEpisodesOfTheCharacter(arrayEpisodesOfTheCharacter);
 
-  for (let i=0; i<arrayNumberOfEpisodes .length; i++) {
+  for (let i=0; i<arrayNumberOfEpisodes.length; i++) {
     if (arrayNumberOfEpisodes.length === 1){ //si tiene un episodio solamente...
       stringEpisodes += arrayNumberOfEpisodes[i]; // … lo escribe y nada más
 
     } else if (i===0) { //si es el primer episodio
       stringEpisodes += arrayNumberOfEpisodes[i]; // … lo escribe y nada más
-    } else if (i === (arrayNumberOfEpisodes .length-1)) { //si es el último episodio
+    } else if (i === (arrayNumberOfEpisodes.length-1)) { //si es el último episodio
       stringEpisodes += (" y " + arrayNumberOfEpisodes[i]);
     } else { //si es un episodio al medio
       stringEpisodes += (", " + arrayNumberOfEpisodes[i]);

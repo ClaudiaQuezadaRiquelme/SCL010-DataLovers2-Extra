@@ -253,4 +253,14 @@ describe('showEpisodesOfTheCharacter', () => {
     let prueba = showEpisodesOfTheCharacter('Slippery Stair', muestra);
     assert.equal(prueba, '5 y 11');
   });
+
+  it('si hago "let prueba = showEpisodesOfTheCharacter("Rick Sanchez", muestra)", prueba debería ser un "string"', () => {
+    let prueba = showEpisodesOfTheCharacter('Rick Sanchez', muestra);
+    assert.equal(typeof prueba, 'string');
+  });
+
+  it('si hago "let prueba = showEpisodesOfTheCharacter("Rick Sanchez", muestra)", prueba debería ser "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30 y 31"', () => {
+    let prueba = showEpisodesOfTheCharacter('Rick Sanchez', muestra);
+    assert.equal(prueba, '1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30 y 31');
+  });//este test funciona sin el break en data.js pero cuando sacamos break, en lugar de mostrar los 26 episodios, muestra sólo episode(s): 6
 });
